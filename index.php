@@ -6,7 +6,6 @@
 <meta http-equiv="Content-Language" content="pt-br">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>UPLOAD ARQUIVO(S)</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="document/load.js"></script>
     <script src="document/listfile.js"></script>
 
@@ -15,7 +14,6 @@
 
 </head>
 <body >
-
 
 <br/>
 	<div class="container">
@@ -46,9 +44,7 @@
 				style="width: 0%" aria-valuemax="100">0%
 			</div>
 		</div>
-		<h3 id="msg_final" style="display:none">Finalizando Transferêcia!</h3>
-		<progress class="progressFinaly" id="finaly" style="width:500px; display:none" ></progress>
-		<div class="animate" id="anime"></div>
+		
 		
 		<br/>
 		<div class="col-sm-12 col-md-12 col-lg-12" style="overflow: auto; max-height: 400vh;">
@@ -66,11 +62,17 @@
 				position:absolute;bottom:20px;width:100%;"></span>
 			</div>
 			<div id='tranferencia' style='position:absolute;bottom:20px;width:100%; display:none'
-			 class='alert alert-success' 
-			 role='alert'><h4>Transferêcia completa!</h4></div>
+				class='alert alert-success' 
+				role='alert'><h4>Transferêcia completa!</h4>
+			 </div>
+	
+	<div id="progressExterna" style="display: none">
+		<?php include("progress.php")?>
+	</div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bootstrap-4.1.1/dist/js/bootstrap.min.js"></script>
+	
 </body>
 </html>

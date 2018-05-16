@@ -65,8 +65,10 @@ function progressHandler(event){
         progressBar.innerText = `${valor}%` ;
         _("progressBar").value = valor ;
         if(valor==100){
-            document.getElementById("msg_final").style.display = "block";
-            document.getElementById("anime").style.display = "block";
+            _("progressBar").value = 0 ;
+            progressBar.style = `width: 0`;
+            progressBar.innerText = `0%` ;
+            document.getElementById("progressExterna").style.display = 'block';
             document.getElementById("div-progress").style.display = 'none';
         }
 }
@@ -86,9 +88,7 @@ function abortHandler(event){
 }
 
 function verificarEnvio() {
-        document.getElementById("msg_final").style.display = "none";
-        document.getElementById("finaly").style.display = "none";
-        document.getElementById("anime").style.display = "none";
+        document.getElementById("progressExterna").style.display = 'none';
         document.getElementById("tranferencia").style.display = 'block';
         clearListFile();
             setTimeout( function() {
